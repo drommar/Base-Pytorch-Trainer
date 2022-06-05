@@ -1,0 +1,6 @@
+seed: 42
+gpus: [0]
+model_type: "base_model"
+weights_path:
+dataset_dir: ../../dataset/
+submission_file_path: ../../submissions/submission.csv

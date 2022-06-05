@@ -1,0 +1,6 @@
+*.pyc
+.idea/
+dataset/*
+checkpoints/
+logs/
+submissions/*

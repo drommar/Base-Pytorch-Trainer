@@ -1,0 +1,17 @@
+seed: 42
+gpus: [0]
+epochs: 100
+batch_size: 128
+lr: 1e-3
+momentum: 0.9
+beta: 0.999
+weight_decay: 0
+save_prefix: "focal_loss"
+model_type: "base_model"
+is_load_strict: true
+is_load_pretrained_weight: false
+pretrained_weights_path: ''
+is_resuming_training: false
+checkpoint_path: ''
+dataset_dir: ../../dataset/
+checkpoints_dir: '../../checkpoints/'

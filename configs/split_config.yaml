@@ -1,0 +1,3 @@
+seed: 42
+valid_ratio: 0.2
+dataset_dir: ../../dataset/
