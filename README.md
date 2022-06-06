@@ -52,9 +52,9 @@ root/test_images/xxy.png
 
 ### 3, Set your parameter
 
-You can set parameter on `config/xxx.yaml` which will be set as default parameter.
+You can set parameter in `config/xxx.yaml` which will be set as default parameter.
 
-Then, you can override parameter on shell script.
+Then, you can override any parameter in shell script.
 
 ### 4, Split dataset
 
@@ -62,7 +62,7 @@ Running Script `./do_split_dataset.sh`
 
 ### 5, Create model
 
-Create your model on `src/main/model`
+Create your model in `src/main/model`
 
 ### 6, Train
 
