@@ -75,3 +75,13 @@ Running Script `./do_train.sh`
 Running Script `./do_predict.sh`
 
 Every row of submission file should already have ID
+
+## Credits
+
+* This project is base on [ahangchen/torch_base](https://github.com/ahangchen/torch_base)
+
+* [pytorch/pytorch](https://github.com/pytorch/pytorch)
+
+* [tensorflow/tensorboard](https://github.com/tensorflow/tensorboard)
+
+* [yaml/pyyaml](https://github.com/yaml/pyyaml)
