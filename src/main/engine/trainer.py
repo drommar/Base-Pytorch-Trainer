@@ -87,10 +87,7 @@ class Trainer(object):
             input_batch, output_batch, label_batch = self.__step(data_batch)
 
             # compute loss and acc
-            metrics = self.__compute_metrics(output_batch, label_batch, is_train=True)
-
-            # get the item for backward
-            loss = metrics['train/loss']
+            loss, metrics = self.__compute_metrics(output_batch, label_batch, is_train=True)
 
             # compute gradient and do Adam step
             self.__optimizer.zero_grad()
@@ -110,7 +107,7 @@ class Trainer(object):
                 input_batch, output_batch, label_batch = self.__step(data_batch)
 
                 # compute loss and acc
-                metrics = self.__compute_metrics(output_batch, label_batch, is_train=False)
+                loss, metrics = self.__compute_metrics(output_batch, label_batch, is_train=False)
 
                 for key in metrics.keys():
                     self.__logger.record_scalar(key, metrics[key])
@@ -132,10 +129,10 @@ class Trainer(object):
         acc = evaluate_accuracy(output_batch, label_batch)
         prefix = 'train/' if is_train else 'val/'
         metrics = {
-            prefix + 'loss': loss,
+            prefix + 'loss': loss.item(),
             prefix + 'accuracy': acc,
         }
-        return metrics
+        return loss, metrics
 
     @staticmethod
     def __gen_imgs_to_write(img, is_train):
